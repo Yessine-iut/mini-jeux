@@ -1,0 +1,55 @@
+body {
+    background-image: url("../assets/images/ciel seu.jpg");
+    background-size: cover; 
+    
+}
+.frame {
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    margin: auto;
+    margin-top:100px;
+    text-align: center;
+    border: 1px solid transparent;
+    background-size: cover;
+    position: relative;
+    top: -5rem;
+}
+
+.shomup {
+    height: 180px;
+    width: 900px;
+    text-align: center;
+    margin: auto;
+}
+.frame1 {
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+    margin-top: 75px;
+}
+
+#rules {
+    margin-top: 20px;
+}
+
+.btn-group {
+    margin-top: 90px;
+}
+
+.btn-group .selects
+    {  
+        width :70%;
+        height : 70%;
+        margin : 12px;
+    }
+.btn-group .selects:hover
+    {  
+        box-shadow: 0 5px 30px rgb(255, 255, 255);
+
+    }
+
+.foot {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}

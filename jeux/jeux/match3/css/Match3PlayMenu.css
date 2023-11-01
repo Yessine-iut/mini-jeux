@@ -1,0 +1,207 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.frame {
+ 
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    margin: auto;
+    margin-top:100px;
+    text-align: center;
+    border: 1px solid transparent;
+    background-size: cover;
+    
+    position: relative;
+    top: -5rem;
+}
+
+.test{
+    height: 600px;
+    width: 1200px;
+    border:1px solid black;
+    background-image: url("../assets/images/difficulte.jpg");
+    background-size: cover; 
+    margin:auto;
+
+
+}
+
+.candy {
+    height: 150px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: -50px;
+}
+.frame1 {
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+    margin-top: 75px;
+}
+
+.btn-group {
+margin-top: 20px;}
+
+.btn-group .selects
+    {  
+        width :30%;
+        height : 30%;
+        margin : 50px;
+        margin-bottom: -20px;
+        
+    }
+
+    .btn-group .selects2
+    {  
+      display: list-item;
+      width: 200px;
+      height: 60px;
+      margin-top: 20px;
+      margin-left: 20px;
+      transform: scale(0.8);
+
+
+    }
+    .btn-group3 .selects3
+    {  
+        display: list-item;
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 160px;
+        transform: scale(0.8);
+    }
+.foot {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-top: none;
+    
+    
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    margin-left:650px;
+   /* background: #e5aef1;*/
+    background: rgb(233, 167, 224);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+
+   
+    overflow-x:hidden;
+
+
+  }
+  #trait_dessus
+{
+border-top: 1px solid #000;
+width : 700px;
+}
+
+  .popup h2 {
+    margin-top: 0;
+    color: #FF5959;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 40px;
+    font-family: Charcoal, sans-serif;
+
+   
+  }
+  
+  .popup h3 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: palevioletred;
+    border:solid;
+    border-color: white;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+  }
+  .popup h5 {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 15px;
+  }
+  .popup p {
+    text-align: left;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(87, 85, 85);
+  }
+  .popup table
+{
+    border-collapse: collapse;
+    margin:auto;
+}
+.popup td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+    height: 5%;
+    width: 5%;
+    text-align: center;
+}
+  .popup h4 {
+    font-family: Charcoal, sans-serif;
+
+    text-align: left;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  .popup li{
+    text-align: left;
+
+  }
+ 
+
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .popup .content {
+    overflow-y:hidden;
+    overflow-x:hidden;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }

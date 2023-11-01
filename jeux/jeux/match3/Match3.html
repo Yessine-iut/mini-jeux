@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+    <Link rel="Stylesheet" type="text/css" href="./css/Match3PlayMenu.css">
+     <title>HYSI - Match3</title>
+
+    </head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+             <div class="navbar-header">
+                  <a href="../../index.html" class="navbar-brand"><i class="fa fa-magnet">HYSI</i></a>
+             </div>
+             <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                       <li class="active"><a href="../../index.html">Nos Jeux</a></li>
+                       <li><a href="../../scores.html">Scores</a></li>
+                    </ul>
+             </div>
+        </div>
+   </div>
+   <div class="test">
+  <div class="frame1"> 
+    <img class = "candy" src="./assets/images/match3title2.png" alt="titlematch3">
+</div> 
+ 
+
+    <div class="frame">
+      <div class="btn-group">
+        <a href="./match3PlayDifficulte.html"><img class="selects2" src="assets/images/match3newgame.png" alt="game" onmouseover="hover(this);" onmouseout="unhover(this);"/></a>
+         <div class="box">
+          <a href="#popup1"><img class="selects2" src="assets/images/Match3rules.png" alt="rules" onmouseover="hover(this);" onmouseout="unhover(this);"/></a>
+
+     </div>
+     <div id="popup1" class="overlay">
+          <div class="popup">
+               <h2><b>Rules</b></h2>
+               <div class="trait_dessus"><hr></div> 
+
+               <div class="content">
+                    <h3>Goal to the game</h3>
+
+                    <p>Your objective is to have the required number of points before you run out of moves. </p>
+                    <p><b>Easy :</b> 3500 pts, 30 moves <br>
+                         <b>Medium :</b> 3500 pts, 25 moves<br>
+                         <b>Hard :</b> 4500 pts, 20 moves</p>
+                         <h4>How to earn points</h4>
+                         <ul><li>Match-3 <p> You earn points when you line up three cookies of the same type, we call it a match-3 </p>
+                              <table>
+                                   <tr>
+                                       <td>Cookie</td>
+                                       <td>Pts</td>
+                                   </tr>
+                                   <tr>
+                                       <td><img src="assets/images/Croissant.png" alt="croissant"></td>
+                                       <td>10 pts</td>
+                                   </tr>
+                                   <tr>
+                                        <td><img src="assets/images/Cupcake.png" alt="cupcake"></td>
+                                        <td>20 pts</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/images/Danish.png" alt="danish"> </td>
+                                        <td>30 pts</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/images/Donut.png" alt="donut"></td>
+                                        <td>40 pts</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/images/Macaroon.png" alt="macaron"></td>
+                                        <td>50 pts</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="assets/images/SugarCookie.png" alt="sugar"> </td>
+                                        <td>60 pts</td>
+                                    </tr>
+                                </table>  </li>
+
+                       
+                           <li>Quest  <p> You can earn points by completing quests, the quests become more and more difficult depending on the difficulty level chosen </p>
+                           </li>
+
+                         </ul>
+                    <div class="trait_dessus"><hr></div> 
+                    <a class="close" href="#">&times;</a>
+
+               </div>
+</div>
+              
+          </div>
+     </div>
+    </div>
+    
+ 
+   </div>
+   
+<!-- Footer Section -->
+
+<footer class = "foot">
+    <div class="container">
+         <div class="row">
+              <div class="col-md-6 col-sm-6">
+                   <div class="footer-copyright">
+                        <p>© 2021 HYSI | Hugo NORTIER, Yessine BEN EL BEY, Saad-El-Din  AHMED</p>
+                   </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                   <ul class="iconeGithub">
+                        <li><a href="https://github.com/L3-Info-Miage-Universite-Cote-D-Azur/web-ihm-ahmed-ben-el-bey" class="fa fa-github"></a></li>
+                   </ul>
+              </div>
+         </div>
+    </div>
+</footer>
+<!-- SCRIPTS -->
+<script>function hover(element) {
+     if(element.getAttribute('src')=='assets/images/match3newgame.png'){
+          element.setAttribute('src', 'assets/images/match3newgames.png');
+
+     }
+     else{
+          element.setAttribute('src', 'assets/images/match3ruless.png');
+
+     }
+   }
+   
+   function unhover(element) {
+     if(element.getAttribute('src')=='assets/images/match3newgames.png'){
+          element.setAttribute('src', 'assets/images/match3newgame.png');
+
+     }
+     else{
+          element.setAttribute('src', 'assets/images/match3rules.png');
+
+     }
+   }</script>
+
+</body>
+</html>

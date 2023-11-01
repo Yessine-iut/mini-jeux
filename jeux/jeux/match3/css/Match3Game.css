@@ -1,0 +1,565 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+
+
+#main {
+    background-image: url("../assets/images/Background@2x.png");
+    border: 4px solid rgba(100, 100, 100);
+    width: 804px;
+    margin: auto;
+    transform: scale(0.8);
+    margin-left: 200px;
+
+}
+
+#infos {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#infos div {
+    /* https://css-tricks.com/almanac/properties/j/justify-content/ */
+    font-size: 30px;
+    color: rgb(133, 47, 47);
+    margin-top: 10px;
+    transform: scale(0.8);
+
+}
+
+#grille {
+    width: 799px;
+    height: 799px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border: 1px;
+    border: 1px solid #999;
+
+    display: grid;
+    /* 1fr signifie "une fraction de la largeur de la grille", le repeat dit "9 cases" 
+       égales à une fraction (1/9ème) Voir https://css-tricks.com/snippets/css/complete-guide-grid/ */
+    grid-template-columns: repeat(9, 1fr);
+    /* Pour contraindre la hauteur des lignes */
+    grid-auto-rows: 80px;
+}
+
+#myCanvas {
+    border: -1px solid rgba(100, 100, 100, 0.5);
+}
+
+.foot {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-top: none;
+    
+    
+}
+#grille div {
+    border: 2px solid rgba(100, 100, 100, 0.5);
+    transition: 0.5s all;
+}
+
+#grille div:hover {
+    background-color: yellow;
+}
+
+.grilleDragOver {
+    background-color: pink;
+}
+
+.cookies {
+    transition: 0.3s all;
+}
+
+.cookies {
+    filter: drop-shadow(2px 2px 2px #222);
+}
+
+.cookies:hover {
+    transform: scale(1.2, 1.2);
+    filter: drop-shadow(4px 4px 4px #222);
+}
+
+.cookies-selected {
+    transform: scale(1.2, 1.2);
+    filter: drop-shadow(4px 4px 4px #222);
+
+}
+
+.overlay{
+    position:fixed;
+    left:0px;
+    top:0px;
+
+    background-color: rgba(89,67,43,0.5);
+    width: 100%;
+    height: 100%;
+   display:none;
+
+
+}
+
+.popup{
+    position:fixed;
+   width: 800px;
+    height: 400px;
+    background-color: rgb(124, 21, 116);
+    background-image: url("../assets/images/gameover.png");
+    border-radius: 5px;
+    box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    text-align: center;
+    margin-top: 30%;
+
+}
+
+.overlay h2{
+    font-size: 32px;
+  line-height: 150px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #FF9933; 
+  font-weight:lighter;
+  text-align:center;
+  margin-top: -60px;
+
+}
+.overlay #scoreFinal{
+    font-size: 32px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #FF9933; 
+  text-align:center;
+  margin-top: -50px;
+}
+.overlay #classement{
+    font-size: 25px;
+    text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+    font-family:"Segoe print", Arial, Helvetica, sans-serif;
+    color: #FF9933; 
+    margin-top: -10px;
+    transform: scale(0.8);
+
+}
+ .selects
+    {    
+        margin-left: 20px;
+        margin-top: -30px;
+    }
+   h1{
+       text-align: center;
+   }
+   
+   .overlay2{
+    position:fixed;
+    left:0px;
+    top:0px;
+    background-color: rgba(89,67,43,0.5);
+    width: 100%;
+    height: 100%;
+   display:none;
+
+}
+
+.popup2{
+    position:fixed;
+   width: 800px;
+    height: 450px;
+    background-color: rgb(124, 21, 116);
+    border-radius: 5px;
+
+    box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    text-align: center;
+    margin-top: 30%;
+
+}
+.overlay2 #classement2{
+    font-size: 25px;
+    text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+    font-family:"Segoe print", Arial, Helvetica, sans-serif;
+    color: #FF9933; 
+    margin-top: -85px;
+    transform: scale(0.8);
+
+}
+.overlay2 #scoreFinal2{
+    font-size: 25px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #FF9933; 
+  margin-top: -50px;
+  text-align: left;
+  display: inline-block;
+  margin-right: 550px;
+
+
+}
+footer{
+    border-top: 1px solid #f0f0f0;
+    position:fixed !important;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  
+  footer .footer-copyright {
+    padding-top: 16px;
+  }
+  
+  /*---------------------------------------
+     Social icon             
+  -----------------------------------------*/
+  
+  .iconeGithub {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+  }
+  
+  .iconeGithub li {
+      display: inline-block;
+      list-style: none;
+  }
+  
+  .iconeGithub li a {
+      color: #777;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.4s ease-in-out;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+      margin: 22px 12px 10px 12px;
+  }
+  
+  .iconeGithub li a:hover {
+      color: #000;
+      transform: scale(1.1);
+  }
+  
+.overlay2 #imgGM{
+  margin-top: -80px;
+  text-align: center;
+  transform: scale(0.8);
+}
+.overlay2 #imgGM2{
+    text-align: center;
+    margin-top: -80px;
+  }
+.popup3{
+    position:fixed;
+   width: 800px;
+    height: 280px;
+    background-color: rgb(124, 21, 116);
+    border-radius: 5px;
+
+    box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    text-align: center;
+    margin-top: 35%;
+
+}
+#paramSon{
+    line-height: 45px;
+    padding-left: 20px;
+  }
+  
+.overlay3 #melange{
+    font-size: 25px;
+  text-shadow: -1px -1px #fb6, 1px 1px #d60, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #FF9933; 
+  text-align: center;
+  margin-top: 15%;
+
+}
+.overlay3{
+    position:fixed;
+    left:0px;
+    top:0px;
+    background-color: rgba(89,67,43,0.5);
+    width: 100%;
+    height: 100%;
+   display:none;
+
+}
+.overlay3 #mix{
+    margin-top: 20px;
+
+    margin-left: -1%;
+}
+/*TEST*/
+#progress-bar {
+    float: left;
+	width: 600px;
+	height: 3em;
+	background-color: #111;
+	border-radius: 1.5em;
+	color: white;
+    margin-left: 140%;
+    margin-top: -800px;
+}
+/*TEST*/
+#txt{
+    float: left;
+	width: 500px;
+	height: 3em;
+font-size: 30px;
+    margin-left: 160%;
+    margin-top: -805px;
+    color: white;
+}
+#txt2{
+    float: left;
+	width: 500px;
+	height: 3em;
+font-size: 30px;
+    margin-left: 160%;
+    margin-top: -705px;
+    color: white;
+
+}
+#txt3{
+    float: left;
+	width: 500px;
+	height: 3em;
+font-size: 30px;
+    margin-left: 160%;
+    margin-top: -605px;
+    color: white;
+
+}
+#txt4{
+    float: left;
+	width: 500px;
+	height: 3em;
+font-size: 30px;
+    margin-left: 185%;
+    margin-top: -505px;
+    color: white;
+
+}
+
+#progressbarbefore{
+    content: attr(data-label);
+
+    width: 300px;
+	display: flex;
+	align-items: center;
+    height: 3em;
+	max-width: 100%;
+	/*background-color: #069;*/
+    background-color: green;
+	border-radius: 1em;
+}
+
+#progress-bar2 {
+    float: left;
+	width: 600px;
+	height: 3em;
+	background-color: #111;
+	border-radius: 1.5em;
+	color: white;
+    margin-left: 140%;
+    margin-top: -700px;
+    
+
+}
+
+#progressbar2before {
+	content: attr(data-label);
+
+    width: 300px;
+	display: flex;
+	align-items: center;
+    height: 3em;
+	max-width: 100%;
+	/*background-color: #069;*/
+    background-color: green;
+	border-radius: 1em;
+}
+#progress-bar3 {
+    float: left;
+	width: 600px;
+	height: 3em;
+	background-color: #111;
+	border-radius: 1.5em;
+	color: white;
+    margin-left: 140%;
+    margin-top: -600px;
+
+
+}
+
+#progressbar3before {
+	content: attr(data-label);
+	display: flex;
+	align-items: center;
+	width: 500px;
+    height: 3em;
+	max-width: 100%;
+	/*background-color: #069;*/
+    background-color: green;
+	border-radius: 1em;
+}
+
+
+#progress{
+   /* margin-left: 390px;
+    margin-top: 30px;*/
+   /* margin-left: 25%;*/
+    margin-left: 400px;
+    margin-top: 130px;
+    width: 33%;
+    height: 33%;
+    transform: scale(0.8, 0.8);
+    
+}
+
+/******************************/
+.popup41 {
+    margin: 1% auto;
+    padding: 20px;
+    margin-left:650px;
+   /* background: #e5aef1;*/
+    background: rgb(233, 167, 224);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+
+   
+    overflow-x:hidden;
+
+
+  }
+  #trait_dessus
+{
+border-top: 1px solid #000;
+width : 700px;
+}
+
+  .popup41 h2 {
+    margin-top: 0;
+    color: #FF5959;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 40px;
+    font-family: Charcoal, sans-serif;
+text-align: center;
+   
+  }
+  
+  .popup41 h3 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: palevioletred;
+    border:solid;
+    border-color: white;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+  }
+  .popup41 h5 {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 15px;
+  }
+  .popup41 p {
+    text-align: left;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(87, 85, 85);
+  }
+  .popup41 table
+{
+    border-collapse: collapse;
+    margin:auto;
+}
+.popup41 td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+    height: 5%;
+    width: 5%;
+    text-align: center;
+}
+  .popup41 h4 {
+    font-family: Charcoal, sans-serif;
+
+    text-align: left;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  .popup41 li{
+    text-align: left;
+
+  }
+ 
+
+  .popup41 .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup41 .content {
+    overflow-y:hidden;
+    overflow-x:hidden;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  .overlay4 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay4:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .button {
+    background-color: #d64fd6;
+    border: 1px black;
+    border-style: solid;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+  text-decoration: none;
+    cursor: pointer;
+    transform: scale(0.8);
+
+    
+  }
+  .inderline{
+    text-decoration: underline;
+  }
+
+  

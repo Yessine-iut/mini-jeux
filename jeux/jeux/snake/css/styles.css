@@ -1,0 +1,167 @@
+.bodyCss{
+  position:fixed;
+  background-color: white;
+  top:0;
+  bottom:3rem;
+  left:0;
+  right:0;
+}
+
+.imgFaucontre{
+  background-image: url("../assets/images/veggie.jpg");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  top:3.5rem;
+  bottom:0;
+  width:100%;
+  position:absolute;
+}
+
+.divBoutons {
+  position: absolute;
+  top:calc(50% - 0.6rem);
+  width:100%;
+  text-align: center;
+}
+
+.footerH{
+  height:3rem;
+}
+
+/*Boutons*/
+.btnChoix{  
+font-size: 1.5rem;
+}
+
+.button:hover{
+color: white;
+font-weight: bold;
+background: #20c74a;
+box-shadow: 0 0 10px #21f356, 0 0 40px #21f356, 0 0 80px #21f356;
+}
+
+.green{
+  color: green !important;
+}
+
+.choixDiff:hover span, .choixFaci:hover span {
+  display:none
+}
+
+.choixDiff:hover:before {
+  content:"Ah oué t'es chaud toi!";
+}
+.choixFaci:hover:before {
+  content:"Tu cherches la facilité là!";
+}
+
+.nav{
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+.bck:hover{
+  background-color: #D3D3D3 !important;
+}
+
+.bckI:hover{
+  color:rgb(0, 0, 0) !important;
+
+  background-color: transparent !important;
+}
+
+.canvasContainer{
+  padding: 10px 10px 10px 10px;
+  top:5rem;
+  bottom:2.2rem;
+  width:100%;
+  position:absolute;
+}
+#canvas {
+  background: #ADD100;  
+  background: -webkit-linear-gradient(to right, #7B920A, #ADD100);  
+  background: linear-gradient(to right, #7B920A, #ADD100); 
+  border: 7px solid darkslategray;
+  border-top: 36px solid darkslategray;
+}
+
+#canvas:hover { cursor: none; }
+
+
+.infoP p{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.infoP{
+  position:fixed;
+  margin-left:15px;
+  margin-top:5px;
+}
+.infoP:nth-child(2){
+  margin-left:180px;
+}
+.infoP:nth-child(3){
+  margin-left:360px;
+}
+
+.modalEnd {
+  text-align: center;
+  display: none; 
+  position: relative; 
+  
+  z-index: 1; 
+  padding-top: 100px; 
+  
+  margin: 1.25rem auto;
+  max-width: 300px;
+}
+
+.modalEnd-content {
+  background-color: #fefefe;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.noMargin{
+  margin: 0 0 !important;
+}
+
+#rank{
+  color: lime;
+  padding-top:10px;
+  margin: 0 0 !important;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#btnRejouer:hover{
+  color: white;
+  font-weight: bold;
+  background: #20c74a;
+  box-shadow: 0 0 px #21f356, 0 0 20px #21f356, 0 0 40px #21f356;
+}
+
+#toucheP{ 
+  position: absolute;
+  color: red;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
